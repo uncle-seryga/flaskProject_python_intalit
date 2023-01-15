@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Tables ♂ master ♂</h1>
+<h2> Sign up to our site</h2>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>1.Entry your sign-in information</p>
+    <p>
+        {{ form.login.label }}
+        <br>
+        {{ form.login() }}
+    </p>
+    <p>
+        {{ form.password_1st.label }}
+        <br>
+        {{ form.password_1st() }}
+    </p>
+    <p>
+        {{ form.password_2nd.label }}
+        <br>
+        {{ form.password_2nd() }}
+    </p>
+    <p>2.Entry your sign-in information</p>
+    <p>
+        {{ form.submit() }}
+    </p>
+    <a href="/sign_up">Register</a>
+</form>
+
+</body>
+</html>
