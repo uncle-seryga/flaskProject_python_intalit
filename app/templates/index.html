@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins&display=swap');
+    </style>
 </head>
 <body>
-<h1> Tables ♂ master ♂</h1>
-<h2> Sign in your account</h2>
-<form action="" method="post">
-    {{ form.hidden_tag() }}
-    <p>
-        {{ form.login.label }}
-        <br>
-        {{ form.login() }}
-    </p>
-    <p>
-        {{ form.password.label }}
-        <br>
-        {{ form.password() }}
-    </p>
-    <p>
-        {{ form.submit() }}
-    </p>
-    <a href="/sign_up">Register</a>
+<div class="capital">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <div class="center">
+            <div class="left labels">{{ form.login.label }}</div>
+            <br>
+            <p>
+            {{ form.login() }}
+            </p>
+            <div class="left labels">{{ form.password.label }}</div>
+            <br>
+            <p>
+                {{ form.password() }}
+            </p>
+            <div>
+            <p>
+                {{ form.submit(class="register lebutton_l labels lebutton") }}
+                <a href="/sign_up" class="lebutton"><button type="button" class="register labels lebutton_r">Register</button></a>
+{#                <a href="/sign_up" class="register labels lebutton_r">Register</a>#}
+            </p>
+            </div>
+        </div>
+
+</div>
 </form>
+</div>
 </body>
 </html>
