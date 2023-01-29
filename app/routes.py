@@ -1,6 +1,6 @@
 import db_controller
 from app import app
-from flask import render_template,render_template_string
+from flask import render_template, render_template_string, flash
 from app import forms
 
 
@@ -10,12 +10,13 @@ def sign_in():  # put application's code here
     if form.validate_on_submit():
         data = db_controller.Users().get(form.login.data)
         if not data:
-            return render_template_string('No such user!')
+            flash("No such user!")
+            #return render_template_string('No such user!')
         else:
-            if form.login.data == data[0][1]:
+            if form.password.data == data[0][2]:
                 return render_template_string('Welcome to the club, buddy')
             else:
-                return render_template_string('Wrong password!')
+                flash("Wrong password")
     return render_template('index.html', form=form)
 
 

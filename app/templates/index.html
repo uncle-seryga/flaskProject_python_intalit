@@ -16,7 +16,7 @@
             <div class="left labels">{{ form.login.label }}</div>
             <br>
             <p>
-            {{ form.login() }}
+                {{ form.login() }}
             </p>
             <div class="left labels">{{ form.password.label }}</div>
             <br>
@@ -24,11 +24,24 @@
                 {{ form.password() }}
             </p>
             <div>
-            <p>
-                {{ form.submit(class="register lebutton_l labels lebutton") }}
-                <a href="/sign_up" class="lebutton"><button type="button" class="register labels lebutton_r">Register</button></a>
-{#                <a href="/sign_up" class="register labels lebutton_r">Register</a>#}
-            </p>
+                <p>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{ message }}
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </p>
+            </div>
+            <div>
+                <p>
+                    {{ form.submit(class="register lebutton_l labels lebutton") }}
+                    <a href="/sign_up" class="lebutton">
+                        <button type="button" class="register labels lebutton_r">Register</button>
+                    </a>
+                    {#                <a href="/sign_up" class="register labels lebutton_r">Register</a>#}
+                </p>
             </div>
         </div>
 

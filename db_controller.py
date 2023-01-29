@@ -15,7 +15,7 @@ class Users(DB):
     table_name = "users"
 
     def add(self, login: str, password: str):
-        self._cursor.execute("""INSERT INTO {self.table_name} VALUES (NULL,?,?)""", (login, password))
+        self._cursor.execute(f"""INSERT INTO {self.table_name} VALUES (NULL,?,?)""", (login, password))
         self._connection.commit()
 
     def get(self, login) -> list:
@@ -87,6 +87,5 @@ class Player(DB):
     def add(self, username, DOB, telegram_id):
         __default_pic = "/app/static/img/users_profile_pics/default.png"
         self._cursor.execute(f"""INSERT INTO {self.table_name} VALUES (NULL,?,?,?,?)""",
-                              (username, __default_pic, DOB, telegram_id,))
-
+                             (username, __default_pic, DOB, telegram_id,))
 
