@@ -1,4 +1,5 @@
 import sqlite3
+from datetime import datetime
 
 
 class DB:
@@ -7,6 +8,7 @@ class DB:
     table_name: str
 
     def __init__(self):
+        print(f"DB updated @ {str(datetime.now())[:-7]}")
         with open("app/static/database/setStrucure.sql", 'r') as file:
             self._cursor.executescript(file.read())
 
@@ -89,3 +91,18 @@ class Player(DB):
         self._cursor.execute(f"""INSERT INTO {self.table_name} VALUES (NULL,?,?,?,?)""",
                              (username, __default_pic, DOB, telegram_id,))
 
+
+class Gamefield(DB):
+    table_name = 'gamefield'
+
+    def get_all_data(self):
+        self._cursor.execute(f"""SELECT * FROM {self.table_name}""")
+        return self._cursor.fetchall()
+
+
+class Words(DB):
+    table_name = 'words'
+
+    def get_all(self) -> list:
+        self._cursor.execute(f"""SELECT * FROM {self.table_name}""")
+        return self._cursor.fetchall()

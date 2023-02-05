@@ -22,12 +22,18 @@ CREATE TABLE IF NOT EXISTS games
     id   integer primary key autoincrement,
     name text
 );
-CREATE TABLE IF NOT EXISTS game_sessions
+
+CREATE TABLE IF NOT EXISTS gamefield
 (
     id        integer primary key autoincrement,
     player_id text,
-    score     integer
+    word      text,
+    letters   text,
+    status    integer
 );
 
-
-
+CREATE TABLE IF NOT EXISTS words
+(
+    id   integer primary key autoincrement,
+    word text
+)

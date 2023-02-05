@@ -17,3 +17,8 @@ class RegistrationForm(FlaskForm):
     dob = DateField('DOB', validators=[DataRequired()])
     tg_acc = StringField('Telegram account id')
     submit = SubmitField('Sign Up')
+
+
+class Gamefield(FlaskForm):
+    entry = StringField(validators=[DataRequired()])
+    submit = SubmitField('Try')

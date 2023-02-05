@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gamefield</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins&display=swap');
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div class="center">
+        <div class="left labels"></div>
+        <br>
+        <p>{{ word }}
+        <p>
+            {{ form.entry()}}
+        </p>
+    </div>
+    <div>
+        <p>
+            {{ form.submit(class="register lebutton_l labels lebutton") }}
+        </p>
+    </div>
+    </div>
+</form>
+</body>
+</html>
