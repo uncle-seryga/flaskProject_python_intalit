@@ -9,22 +9,22 @@
     </style>
 </head>
 <body>
-<form action="" method="post">
-    {{ form.hidden_tag() }}
-    <div class="center">
-        <div class="left labels"></div>
-        <br>
-        <p>{{ word }}
-        <p>
-            {{ form.entry()}}
-        </p>
-    </div>
-    <div>
-        <p>
-            {{ form.submit(class="register lebutton_l labels lebutton") }}
-        </p>
-    </div>
-    </div>
-</form>
+<div class="box">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <div class="center">
+            <br>
+            <p class="starry">{{ word }}
+            <p>
+                {{ form.entry(class="entryField")}}
+            </p>
+        </div>
+        <div>
+            <p >
+                {{ form.submit(class="button center labels lebutton") }}
+            </p>
+        </div>
+    </form>
+</div>
 </body>
 </html>

@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.capital {
+.box {
     position: fixed;
     top: 25%;
     left: 25%;
@@ -18,10 +18,6 @@
     background-color: aliceblue;
 }
 
-.capital_W{
-    width: 80%;
-}
-
 .left {
     display: inline-block;
     position: absolute;
@@ -33,11 +29,7 @@
     width: 100%;
 }
 
-.lebutton {
-    cursor: url('img/service/male-symbols-icon-7.png'), auto;
-}
-
-.lebutton_l{
+.lebutton_l {
     width: 45%;
     margin: 10px 0;
     position: absolute;
@@ -51,11 +43,11 @@
     right: 0;
 }
 
-.register {
+.button {
     border: 1px solid #0295db;
-    margin: 10px 0;
+    margin: 20px 0;
     text-decoration: none;
-    padding: 10px;
+    padding: 20px;
     background-color: white;
     border-radius: 10px;
     position: absolute;
@@ -63,7 +55,7 @@
     transition: background-color 0.5s, color 0.5s;
 }
 
-.register:hover {
+.button:hover {
     background-color: #0295db;
     color: white;
 }
@@ -72,4 +64,20 @@
     font-family: 'Caveat', cursive;
     font-family: 'Poppins', sans-serif;
     color: #0295db;
+}
+
+.starry {
+    font-family: 'Caveat', cursive;
+    font-family: 'Poppins', sans-serif;
+    color: #0295db;
+    font-size: 50px;
+}
+
+.entryField {
+    border: 1px solid #0295db;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
 }
